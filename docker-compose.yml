@@ -1,0 +1,14 @@
+version: '3'
+services:
+  rosetta:
+    container_name: rosetta
+    volumes:
+      - rosetta-workspace:/workspace
+    tty: true
+    stdin_open: true
+    entrypoint: /usr/bin/fish
+    build: 
+      context: .
+
+volumes:
+  rosetta-workspace:
